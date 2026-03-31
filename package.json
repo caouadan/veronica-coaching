@@ -1,0 +1,21 @@
+{
+  "name": "veronica-icaza-portfolio",
+  "version": "1.0.0",
+  "description": "Site web coaching linguistique - HTML/CSS/JS pur",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "coaching",
+    "linguistique"
+  ],
+  "author": "Veronica Icaza-Lory",
+  "license": "ISC"
+}
