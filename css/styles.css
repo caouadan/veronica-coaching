@@ -891,6 +891,7 @@ html {
   max-width: 12rem;
   height: 100%;
   max-height: 8rem;
+  font-weight: 600;
 }
 
 .btn-contact-card:hover {
@@ -915,6 +916,7 @@ html {
   max-width: 12rem;
   height: 100%;
   max-height: 8rem;
+  font-weight: 600;
 }
 
 .btn-linkedin:hover {
