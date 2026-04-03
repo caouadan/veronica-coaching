@@ -177,22 +177,57 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ===== TESTIMONIAL READ MORE TOGGLE =====
-  const readMoreBtns = document.querySelectorAll('.read-more-btn');
-  readMoreBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const testimonialText = this.previousElementSibling;
-      const isExpanded = testimonialText.classList.contains('expanded');
+  const CHAR_LIMIT = 100;
+  const isSpanish = document.documentElement.lang === 'es';
+  const labels = {
+    readMore: isSpanish ? 'Leer más' : 'Lire plus',
+    readLess: isSpanish ? 'Leer menos' : 'Lire moins'
+  };
 
+  document.querySelectorAll('.testimonial-text').forEach(textEl => {
+    const fullHTML = textEl.innerHTML.trim();
+    const plainText = textEl.textContent.trim();
+    if (plainText.length <= CHAR_LIMIT) return;
+
+    let cutIndex = 0;
+    let charCount = 0;
+    let inTag = false;
+    for (let i = 0; i < fullHTML.length && charCount < CHAR_LIMIT; i++) {
+      if (fullHTML[i] === '<') { inTag = true; cutIndex = i; continue; }
+      if (fullHTML[i] === '>') { inTag = false; cutIndex = i + 1; continue; }
+      if (!inTag) { charCount++; cutIndex = i + 1; }
+    }
+
+    while (cutIndex < fullHTML.length && fullHTML[cutIndex] === '<') {
+      const tagEnd = fullHTML.indexOf('>', cutIndex);
+      if (tagEnd === -1) break;
+      cutIndex = tagEnd + 1;
+    }
+
+    let truncated = fullHTML.slice(0, cutIndex).replace(/\s+\S*$/, '');
+    truncated += '...';
+
+    textEl.innerHTML = truncated;
+
+    const btn = document.createElement('button');
+    btn.className = 'read-more-btn';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = labels.readMore;
+
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
       if (isExpanded) {
-        testimonialText.classList.remove('expanded');
-        this.textContent = 'Lire plus';
-        this.setAttribute('aria-expanded', 'false');
+        textEl.innerHTML = truncated;
+        btn.textContent = labels.readMore;
+        btn.setAttribute('aria-expanded', 'false');
       } else {
-        testimonialText.classList.add('expanded');
-        this.textContent = 'Lire moins';
-        this.setAttribute('aria-expanded', 'true');
+        textEl.innerHTML = fullHTML;
+        btn.textContent = labels.readLess;
+        btn.setAttribute('aria-expanded', 'true');
       }
     });
+
+    textEl.parentElement.appendChild(btn);
   });
 
   // ===== LAZY LOADING IMAGES =====
@@ -259,19 +294,16 @@ const openModalBtn = document.getElementById('openHubspotModal');
 const closeModalBtn = document.querySelector('.modal-close');
 
 if (hubspotModal && openModalBtn && closeModalBtn) {
-  // Open modal
   openModalBtn.addEventListener('click', function() {
     hubspotModal.style.display = 'block';
     document.body.style.overflow = 'hidden';
   });
 
-  // Close modal
   closeModalBtn.addEventListener('click', function() {
     hubspotModal.style.display = 'none';
     document.body.style.overflow = '';
   });
 
-  // Close when clicking outside the modal
   window.addEventListener('click', function(event) {
     if (event.target === hubspotModal) {
       hubspotModal.style.display = 'none';
@@ -279,7 +311,6 @@ if (hubspotModal && openModalBtn && closeModalBtn) {
     }
   });
 
-  // Close on Escape key
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape' && hubspotModal.style.display === 'block') {
       hubspotModal.style.display = 'none';
