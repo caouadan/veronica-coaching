@@ -966,9 +966,18 @@ html {
   border-radius: 1rem;
   width: 90%;
   max-width: 800px;
-  min-height: 80vh;
+  height: 90%;
   position: relative;
   box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    min-height: 70vh;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
 }
 
 .modal-close {
@@ -1445,4 +1454,42 @@ html {
 .form-success.show {
   display: block;
   animation: fadeInUp 0.4s ease;
+}
+
+/* ===== RESERVATION PAGE ===== */
+.back-to-home {
+  padding: 6rem 1rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--brown-dark);
+}
+
+.back-arrow {
+  font-size: 1.25rem;
+}
+
+.meetings-iframe-container iframe {
+  width: 100%;
+  border: none;
+  display: block;
+  height: 100%;
+}
+
+@media (max-width: 632px) {
+  .meetings-iframe-container iframe {
+    height: 1600px !important;
+  }
 }
