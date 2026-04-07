@@ -1490,6 +1490,6 @@ html {
 
 @media (max-width: 632px) {
   .meetings-iframe-container iframe {
-    height: 1600px !important;
+    height: 1800px !important;
   }
 }
