@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Moontime&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- NAV -->
@@ -52,58 +53,51 @@
   <main class="page-content">
     <!-- SECTION 1: Révolution cognitive -->
     <section class="methode-hero">
-      <h1 class="methode-title anim-fade-up">Une révolution cognitive</h1>
+<h1 class="methode-title anim-fade-up">Une révolution cognitive</h1>
 
       <div class="methode-table-wrapper anim-fade-up anim-fade-up-d2">
-        <table class="methode-table">
-<thead>
-            <tr>
-              <th class="methode-th-coaching">Neurolanguage Coaching®</th>
-              <th class="methode-th-classique">Approche traditionnelle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Apprentissage actif et motivant</td>
-              <td>Apprentissage passif</td>
-            </tr>
-            <tr>
-              <td>Écoute, empathie et engagement</td>
-              <td>Communication unidirectionnelle</td>
-            </tr>
-            <tr>
-              <td>Méthode adaptée au fonctionnement du cerveau</td>
-              <td>Approche standardisée</td>
-            </tr>
-            <tr>
-              <td>Feedback continu et ciblé</td>
-              <td>Retours limités et génériques</td>
-            </tr>
-            <tr>
-              <td>Objectifs définis sur mesure</td>
-              <td>Peu adapté aux besoins individuels</td>
-            </tr>
-            <tr>
-              <td>Relation équilibrée coach — coaché</td>
-              <td>Relation hiérarchique</td>
-            </tr>
-            <tr>
-              <td>Rythme adapté à votre agenda et à vos contraintes</td>
-              <td>Calendrier fixe et imposé</td>
-            </tr>
-            <tr>
-              <td>Progression mesurable et visible</td>
-              <td>Progression floue et difficile à évaluer</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="methode-columns">
+          <div class="methode-col neuro">
+            <h3 class="methode-col-title">Neurolanguage Coaching®</h3>
+            <ul class="methode-col-list">
+              <li><i class="fa-brands fa-teamspeak"></i> Apprentissage actif et motivant</li>
+              <li><i class="fa-solid fa-people-arrows"></i> Écoute, empathie et engagement</li>
+              <li><i class="fa-solid fa-brain"></i> Méthode adaptée au fonctionnement du cerveau</li>
+              <li><i class="fa-solid fa-comments"></i> Feedback continu et ciblé</li>
+              <li><i class="fa-solid fa-location-crosshairs"></i> Objectifs définis sur mesure</li>
+              <li><i class="fa-solid fa-scale-balanced"></i> Relation équilibrée coach — coaché</li>
+              <li><i class="fa-solid fa-business-time"></i> Rythme adapté à votre agenda et à vos contraintes</li>
+              <li><i class="fa-solid fa-handshake"></i> Progression mesurable et visible</li>
+            </ul>
+          </div>
+          <div class="methode-col classique">
+            <h3 class="methode-col-title">Approche traditionnelle</h3>
+            <ul class="methode-col-list">
+              <li><i class="fa-brands fa-readme"></i> Apprentissage passif</li>
+              <li><i class="fa-solid fa-person-walking-arrow-right"></i> Communication unidirectionnelle</li>
+              <li><i class="fa-solid fa-building-columns"></i> Approche standardisée</li>
+              <li><i class="fa-solid fa-comment-slash"></i> Retours limités et génériques</li>
+              <li><i class="fa-solid fa-person-circle-question"></i> Peu adapté aux besoins individuels</li>
+              <li><i class="fa-solid fa-scale-unbalanced"></i> Relation hiérarchique</li>
+              <li><i class="fa-solid fa-calendar-days"></i> Calendrier fixe et imposé</li>
+              <li><i class="fa-solid fa-user-lock"></i> Progression floue et difficile à évaluer</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- WAVE DIVIDER -->
+    <div class="wave-top-methode">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1350,60 1440,40 L1440,80 L0,80 Z" fill="var(--border)"/>
+      </svg>
+    </div>
+
     <!-- SECTION 2: La Neurolinguistique -->
-    <section class="methode-section">
-      <h2 class="methode-section-title anim-fade-up">Neurolanguage Coaching®</h2>
+    <section class="methode-section methode-with-image neuro">
       <div class="methode-text anim-fade-up anim-fade-up-d1">
+        <h2 class="methode-section-title anim-fade-up">Neurolanguage Coaching®</h2>
         <p>
           Le Neurolanguage Coaching® s'appuie sur les neurosciences pour placer votre cerveau au cœur de votre progression linguistique. Chaque séance est construite autour de vos besoins, de votre rythme et de vos objectifs professionnels sans programme imposé, sans contenus génériques.
         </p>
@@ -111,12 +105,25 @@
           Nous créons ensemble un espace dynamique et stimulant où l'empathie et la science du cerveau se rencontrent pour vous aider à monter en compétences de façon fluide, naturelle et libérée des blocages habituels.
         </p>
       </div>
+      <div class="methode-image-right">
+        <img src="src/assets/etude-neurosciences.webp" alt="Étude neurosciences" class="methode-img">
+      </div>
     </section>
 
+    <!-- WAVE DIVIDER -->
+    <div class="wave-bottom-methode">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1350,20 1440,40 L1440,80 L0,80 Z" fill="var(--border)"/>
+      </svg>
+    </div>
+
     <!-- SECTION 3: Devenez l'acteur -->
-    <section class="methode-section methode-cta-section">
-      <h2 class="methode-cursive-title anim-fade-up">Devenez l'acteur de votre propre réussite !</h2>
+    <section class="methode-section methode-with-image action">
+      <div class="methode-image-left">
+        <img src="src/assets/communication-reussie-multilangues.webp" alt="Communication réussie" class="methode-img">
+      </div>
       <div class="methode-text anim-fade-up anim-fade-up-d1">
+        <h2 class="methode-cursive-title anim-fade-up">Devenez l'acteur de votre propre réussite !</h2>
         <p>
           Et si vous preniez enfin les rênes ? Ma méthode se base sur une alliance entre égaux où votre motivation est le moteur principal.
         </p>
@@ -124,10 +131,12 @@
           Comme coach, je m'adapte à votre réalité et à vos besoins spécifiques pour maximiser votre potentiel — maintenant le focus sur ce qui génère des résultats concrets.
         </p>
         <p>
-          À travers l'autoréflexion et un feedback continu, nous entraînons votre cerveau à maîtriser le язык avec confiance, plaisir et une efficacité extraordinaire.
+          À travers l'autoréflexion et un feedback continu, nous entraînons votre cerveau à maîtriser la langue avec confiance, plaisir et une efficacité extraordinaire.
         </p>
+        <div class="methode-cta">
+          <a href="index.html#contact" class="btn-primary anim-fade-up anim-fade-up-d3">On discute ?</a>
+        </div>
       </div>
-      <a href="index.html#contact" class="btn-primary anim-fade-up anim-fade-up-d3">On discute ?</a>
     </section>
   </main>
 

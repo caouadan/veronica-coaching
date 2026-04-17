@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- NAV -->
@@ -54,55 +55,48 @@
       <h1 class="methode-title anim-fade-up">A cognitive revolution</h1>
 
       <div class="methode-table-wrapper anim-fade-up anim-fade-up-d2">
-        <table class="methode-table">
-          <thead>
-            <tr>
-              <th class="methode-th-coaching">Neurolanguage Coaching®</th>
-              <th class="methode-th-classique">Traditional Approach</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Active and motivating learning</td>
-              <td>Passive learning</td>
-            </tr>
-            <tr>
-              <td>Listening, empathy and engagement</td>
-              <td>One-way communication</td>
-            </tr>
-            <tr>
-              <td>Method adapted to how the brain works</td>
-              <td>Standardised approach</td>
-            </tr>
-            <tr>
-              <td>Continuous and targeted feedback</td>
-              <td>Limited and generic feedback</td>
-            </tr>
-            <tr>
-              <td>Tailor-made goals</td>
-              <td>One-size-fits-all</td>
-            </tr>
-            <tr>
-              <td>Balanced coach — coachee relationship</td>
-              <td>Hierarchical relationship</td>
-            </tr>
-            <tr>
-              <td>Pace adapted to your schedule and constraints</td>
-              <td>Fixed and imposed timetable</td>
-            </tr>
-            <tr>
-              <td>Measurable and visible progress</td>
-              <td>Vague and hard-to-assess progress</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="methode-columns">
+          <div class="methode-col neuro">
+            <h3 class="methode-col-title">Neurolanguage Coaching®</h3>
+            <ul class="methode-col-list">
+              <li><i class="fa-brands fa-teamspeak"></i> Active and motivating learning</li>
+              <li><i class="fa-solid fa-people-arrows"></i> Listening, empathy and engagement</li>
+              <li><i class="fa-solid fa-brain"></i> Method adapted to how the brain works</li>
+              <li><i class="fa-solid fa-comments"></i> Continuous and targeted feedback</li>
+              <li><i class="fa-solid fa-location-crosshairs"></i> Tailor-made goals</li>
+              <li><i class="fa-solid fa-scale-balanced"></i> Balanced coach — coachee relationship</li>
+              <li><i class="fa-solid fa-business-time"></i> Pace adapted to your schedule and constraints</li>
+              <li><i class="fa-solid fa-handshake"></i> Measurable and visible progress</li>
+            </ul>
+          </div>
+          <div class="methode-col classique">
+            <h3 class="methode-col-title">Traditional Approach</h3>
+            <ul class="methode-col-list">
+              <li><i class="fa-brands fa-readme"></i> Passive learning</li>
+              <li><i class="fa-solid fa-person-walking-arrow-right"></i> One-way communication</li>
+              <li><i class="fa-solid fa-building-columns"></i> Standardised approach</li>
+              <li><i class="fa-solid fa-comment-slash"></i> Limited and generic feedback</li>
+              <li><i class="fa-solid fa-person-circle-question"></i> One-size-fits-all</li>
+              <li><i class="fa-solid fa-scale-unbalanced"></i> Hierarchical relationship</li>
+              <li><i class="fa-solid fa-calendar-days"></i> Fixed and imposed timetable</li>
+              <li><i class="fa-solid fa-user-lock"></i> Vague and hard-to-assess progress</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- WAVE DIVIDER -->
+    <div class="wave-top-methode">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1350,60 1440,40 L1440,80 L0,80 Z" fill="var(--border)"/>
+      </svg>
+    </div>
+
     <!-- SECTION 2: Neurolinguistics -->
-    <section class="methode-section">
-      <h2 class="methode-section-title anim-fade-up">Neurolanguage Coaching®</h2>
+    <section class="methode-section methode-with-image neuro">
       <div class="methode-text anim-fade-up anim-fade-up-d1">
+        <h2 class="methode-section-title anim-fade-up">Neurolanguage Coaching®</h2>
         <p>
           Neurolanguage Coaching® draws on neuroscience to put your brain at the centre of your language development. Each session is built around your needs, your pace and your professional goals — no imposed programme, no generic content.
         </p>
@@ -110,12 +104,25 @@
           Together we create a dynamic and stimulating space where empathy and brain science combine to help you build real, lasting skills — fluidly, naturally, and free from the usual obstacles.
         </p>
       </div>
+      <div class="methode-image-right">
+        <img src="src/assets/etude-neurosciences.webp" alt="Neuroscience study" class="methode-img">
+      </div>
     </section>
 
+    <!-- WAVE DIVIDER -->
+    <div class="wave-bottom-methode">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1350,20 1440,40 L1440,80 L0,80 Z" fill="var(--border)"/>
+      </svg>
+    </div>
+
     <!-- SECTION 3: Become the actor -->
-    <section class="methode-section methode-cta-section">
-      <h2 class="methode-cursive-title anim-fade-up">Take ownership of your success!</h2>
+    <section class="methode-section methode-with-image action">
+      <div class="methode-image-left">
+        <img src="src/assets/communication-reussie-multilangues.webp" alt="Successful communication" class="methode-img">
+      </div>
       <div class="methode-text anim-fade-up anim-fade-up-d1">
+        <h2 class="methode-cursive-title anim-fade-up">Take ownership of your success!</h2>
         <p>
           What if you finally took the wheel? My method is built on a true partnership where your motivation is the driving force.
         </p>
@@ -125,8 +132,10 @@
         <p>
           Through self-reflection and continuous feedback, we train your brain to master the language with confidence, enjoyment and remarkable effectiveness.
         </p>
+        <div class="methode-cta">
+          <a href="index-en.html#contact" class="btn-primary anim-fade-up anim-fade-up-d3">Let's talk !</a>
+        </div>
       </div>
-      <a href="index-en.html#contact" class="btn-primary anim-fade-up anim-fade-up-d3">Let's talk !</a>
     </section>
   </main>
 
